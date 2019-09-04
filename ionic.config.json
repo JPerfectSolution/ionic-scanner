@@ -1,0 +1,7 @@
+{
+  "name": "javatraders",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,26 @@
+page-payment-flow {
+  background: #ededed;
+  ion-header {
+    &.sec-header {
+      position: fixed;
+      ion-icon {
+        color: #1a73e8;
+      }
+    }
+  }
+
+ 
+
+  ion-list {
+    ion-icon[name="arrow-forward"] {
+      font-size: 30px;
+      position: relative;
+      right: 0px;
+      top: 7px;
+    }
+  }
+
+  .green-box h1 {
+    padding-top: 33px;
+  }
+}

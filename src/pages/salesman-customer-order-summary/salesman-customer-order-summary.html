@@ -1,0 +1,129 @@
+<!--
+  Generated template for the CustomerProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header color="light" class="sec-header">
+  <ion-navbar color="light">
+    <ion-title>New invoice</ion-title>
+    <ion-buttons end>
+      <button (click)="addNote(invoice)" ion-button icon-only>
+        Add note
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<core-toolbar></core-toolbar>
+<div class="green-box">
+  <h4>Billing : {{ invoice.customer }}</h4>
+  <hr color="light" />
+</div>
+<ion-content style="margin-top: 180px;height:calc(100% - 180px)">
+  <ion-item>
+    <ion-label color="primary">Invoice ID</ion-label>
+    <ion-input placeholder="VBJRROR" [(ngModel)]="invoice.id"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-item>
+      <ion-label color="primary">PO #</ion-label>
+      <ion-input placeholder="343434" [(ngModel)]="invoice.po"></ion-input>
+    </ion-item>
+     <p style="margin: 10px 15px;" *ngIf="invoice.note">Note : {{ invoice.note }}</p>
+    <ion-label>Shipping to</ion-label>
+    <ion-select (ionChange)="setLocationTaxRate()" [(ngModel)]="invoice.location">
+      <ion-option *ngFor="let location of locations" [value]="location">{{ location.name }}</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item *ngIf="invoice.extra_taxrate">
+    <ion-label>Select tax rate</ion-label>
+    <ion-select [(ngModel)]="invoice.taxRate">
+      <div *ngFor="let rate of taxrates">
+        <ion-option *ngIf="rateIndex.indexOf(rate._id) !== -1" [value]="rate.percentage">{{ rate.name }}</ion-option>
+      </div>
+    </ion-select>
+  </ion-item>
+  <ion-searchbar [(ngModel)]="filterVal"></ion-searchbar>
+  <button ion-button color="primary">Go!</button>
+  <div *ngIf="!showSearch && !showStandard">
+    <ion-item-divider>
+      Selected Items
+    </ion-item-divider>
+    <ion-list>
+      <div *ngFor="let item of items | itemfilter:filterVal">
+        <ion-item *ngIf="item.amt" (click)="itemAction(item)">
+          <ion-label item-start>
+            <ion-icon name="star" *ngIf="isStandard(item)"></ion-icon> {{ item.itemName }} | {{ item.vendor }}
+          </ion-label>
+          <ion-label item-content>| {{ item.unitPrice ? item.unitPrice.toFixed(2) : "0.00" }} USD</ion-label>
+          <ion-label item-end style="text-align: right;">
+            <p class="text-muted" *ngIf="item.amt">
+              Qx {{ item.amt }}
+              <ion-icon name="create"></ion-icon>
+            </p>
+          </ion-label>
+        </ion-item>
+      </div>
+    </ion-list>
+  </div>
+  <p style="text-align: center" *ngIf="!invoice.location">Please select a location to display items.</p>
+  <ion-item *ngIf="!showStandard && !showSearch && invoice.location" (click)="showStandard  = true;">
+    <ion-icon name="star"></ion-icon> Standard items
+  </ion-item>
+  <div *ngIf="showStandard">
+    <p style="text-align: center;" *ngIf="standardItems.length == 0">No items found.</p>
+    <ion-list>
+      <div *ngFor="let item of items | itemfilter:filterVal">
+        <ion-item *ngIf="item.std" (click)="itemAction(item)">
+          <ion-label item-start>{{ item.itemName }} | {{ item.vendor }}</ion-label>
+          <ion-label item-content>| {{ item.unitPrice ? item.unitPrice.toFixed(2) : "0.00" }} USD</ion-label>
+          <ion-label item-end style="text-align: right;">
+            <p class="text-muted" *ngIf="item.amt">
+              Qx {{ item.amt }}
+              <ion-icon name="create"></ion-icon>
+            </p>
+          </ion-label>
+        </ion-item>
+      </div>
+    </ion-list>
+  </div>
+  <ion-item *ngIf="!showSearch && !showStandard && invoice.location" (click)="showSearch  = true;">
+    Search items
+  </ion-item>
+  <div *ngIf="showSearch">
+    <ion-list>
+      <ion-item *ngFor="let item of items | itemfilter:filterVal" (click)="itemAction(item)">
+        <ion-label item-start>
+          <ion-icon name="star" *ngIf="isStandard(item)"></ion-icon> {{ item.itemName }} | {{ item.vendor }}
+        </ion-label>
+        <ion-label item-content>| {{ item.unitPrice ? item.unitPrice.toFixed(2) : "0.00" }} USD</ion-label>
+        <ion-label item-end style="text-align: right;">
+          <p class="text-muted" *ngIf="item.amt">
+            Qx {{ item.amt }}
+            <ion-icon name="create"></ion-icon>
+          </p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+  <div style="text-align: center;">
+    <h3><span style="width:70px;">Subtotal : </span> {{ invoice.total.toFixed(2) }} USD</h3>
+    <div *ngIf="invoice.taxValue">
+      <h3><span style="width:70px;">Tax value : </span> {{ invoice.taxValue.toFixed(2) }} USD ({{ invoice.taxRate }} %)</h3>
+    </div>
+    <h3><span style="width:70px;">Total : </span> {{ ( invoice.total + ( invoice.taxValue ? invoice.taxValue : 0 ) ).toFixed(2) }} USD</h3>
+  </div>
+</ion-content>
+<ion-footer color="dark">
+  <ion-toolbar color="dark">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12>
+          <button ion-button *ngIf="!showSearch && !showStandard" color="danger" (click)="save(invoice)" full round>Sell </button>
+          <button ion-button *ngIf="showSearch" color="primary" (click)="showSearch = false;" full round>Done </button>
+          <button ion-button *ngIf="showStandard" color="primary" (click)="showStandard = false;" full round>Done </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

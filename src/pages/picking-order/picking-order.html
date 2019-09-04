@@ -1,0 +1,82 @@
+<core-toolbar></core-toolbar>
+
+<ion-content>
+  <ion-row>
+    <ion-col class="product-header px-20px">
+      <ion-icon name="ios-arrow-back" (click)="gotoPrevPage()"></ion-icon>
+      <div class="title">PICKING</div>
+      <ion-icon name="md-sync"></ion-icon>
+    </ion-col>
+  </ion-row>
+  <div class="sub-title">
+    <div class="d-flex-between align-item-center">
+      <span class="sub-title-circle"></span>
+      <span>YOUR STORE</span>
+      <span class="btn-detail">View</span>
+    </div>
+  </div>
+  <div class="routes-progress-outer">
+    <div class="routes-progress-inner" style="width: 33.33%">
+    </div>
+    <div class="routes-pro"><span class="routes-done">1</span>/3 <span class="routes-done">Items</span></div>
+  </div> 
+  <div class="prod-item d-flex-middle border-bottom-0">
+    <ion-checkbox class="prod-checkbox"></ion-checkbox>
+    <div class="print-types">
+      <ion-select [(ngModel)]="print_type" >
+        <ion-option value="invoice">Print Invoice</ion-option>
+        <ion-option value="Tickets">Print Picking Tickets</ion-option>
+        <ion-option value="Labels">Print Shipping Labels</ion-option>
+      </ion-select>
+      <div class="prod-btn">Print</div>
+    </div>
+  </div>
+  <div class="prod-item d-flex-middle">
+    <ion-checkbox class="prod-checkbox"></ion-checkbox>
+    <div class="prod-content" (click)="editPOD()" [style.background-color]="'$green-color'">
+      <div class="prod-item-header">
+        <span class="item-name green-color">Super Candy</span>
+        <div class="item-unit">
+          <div class="progress">Picked</div>
+          <span class="progress-status">10/10</span>
+          <ion-icon name="ios-arrow-forward"></ion-icon>
+        </div>
+      </div>
+      <div class="prod-item-summary">
+          <span>Aisle 6 | Shelf 3 | Bin 6</span>
+      </div>
+    </div>
+  </div>
+  <div class="prod-item d-flex-middle">
+    <ion-checkbox class="prod-checkbox"></ion-checkbox>
+    <div class="prod-content" (click)="editPOD()" [style.background-color]="'$orange-color'">
+      <div class="prod-item-header">
+        <span class="item-name orange-color">Awesome Product</span>
+        <div class="item-unit">
+          <div class="progress orange-bg-color">In Process</div>
+          <span class="progress-status">7/40</span>
+          <ion-icon name="ios-arrow-forward"></ion-icon>
+        </div>
+      </div>
+      <div class="prod-item-summary">
+          <span>Aisle 3 | Shelf 6 | Bin 5</span>
+      </div>
+    </div>
+  </div>
+  <div class="prod-item d-flex-middle">
+    <ion-checkbox class="prod-checkbox"></ion-checkbox>
+    <div class="prod-content" (click)="editPOD()">
+      <div class="prod-item-header">
+        <span class="item-name red-color">Good Stuff</span>
+        <div class="item-unit">
+          <div class="progress red-bg-color">Incomplete</div>
+          <span class="progress-status">0/8</span>
+          <ion-icon name="ios-arrow-forward"></ion-icon>
+        </div>
+      </div>
+      <div class="prod-item-summary">
+        <span>Aisle 6 | Shelf 2 | Bin 3</span>
+      </div>
+    </div>
+  </div>
+</ion-content>

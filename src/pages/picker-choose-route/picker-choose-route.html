@@ -1,0 +1,41 @@
+<!--
+  Generated template for the SalesmanChooseRoutePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header color="light" class="sec-header">
+  <ion-navbar color="light">
+    <ion-title>Invoice Selection</ion-title>
+  </ion-navbar>
+</ion-header>
+<core-toolbar></core-toolbar>
+<div class="green-box">
+  <h1>SELECT AN INVOICE</h1>
+</div>
+<ion-content style="margin-top: 40px;">
+  <div style="text-align: center;padding: 10px;">
+    <ion-chip *ngIf="truck.name" style="width: 80%; text-align: center;margin: 0 auto;">
+      <ion-icon name="car" color="primary"></ion-icon>
+      <ion-label>LOADING TO {{ truck.name }}</ion-label>
+    </ion-chip>
+  </div>
+  <ion-list>
+
+
+    <ion-item *ngFor="let route of routes" (click)="openRoute(route)">
+      <ion-label style="flex:5" item-start>
+        <ion-icon [color]="route.done ? 'success' : 'danger'" name="checkmark-circle"></ion-icon>
+        {{ route.id }} | {{ route.customer }}
+      </ion-label>
+      <ion-label item-end style="text-align: right;position: relative;top: -6px;">
+        <ion-icon>
+          <p class="text-muted">
+            <ion-icon color="primary" name="arrow-forward"></ion-icon>
+          </p>
+        </ion-icon>
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

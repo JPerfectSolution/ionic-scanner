@@ -1,0 +1,75 @@
+page-order-routes-tab {
+  background: white;
+  .routes-progress-outer {
+    width: 100%;
+    margin: 0;
+    background-color: $dark-color;
+    text-align: center;
+    position: relative;
+    .routes-progress-inner {
+      min-width: 15%;
+      white-space: nowrap;
+      overflow: hidden;
+      padding: 0px;
+      height: 25px;
+      background-color: $orange-color;
+    }
+    .routes-pro{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      text-align: center;
+      color: $orange-color;
+      font-size: 2rem;
+      font-weight: bolder;
+      padding: 1px;
+      .routes-done {
+        color: white;
+      }
+    }
+  }
+  .prod-item {
+    border-bottom: solid 1px gray;
+    padding: 10px 20px;
+    ion-icon {
+      font-size: 5rem;
+    }
+    .prod-content {
+      width: 100%;
+      padding-left: 20px;
+      .prod-item-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .item-name {
+          font-weight: bold;
+          font-size: 2rem;
+          color: $dark-color;
+        }
+        .item-unit {
+          display: flex;
+          align-items: center;
+        }
+      }
+      .prod-item-summary {
+        font-weight: bold;
+        margin-top: 5px;
+        font-size: 1.5rem;
+        .all-routes {
+          color: $dark-color;
+        }
+      }
+    }
+  }
+  .green-color {
+    color: $green-color;
+  }
+  .orange-color {
+    color: $orange-color
+  }
+  .red-color {
+    color: $red-color
+  }
+}

@@ -1,0 +1,22 @@
+core-toolbar {
+  ion-header {
+    background: rgb(43, 55, 60);
+    color: white;
+  }
+}
+
+.ios {
+  .c-header {
+    // padding-top: 15px;
+
+    button {
+      // margin-top: 8px;
+    }
+  }
+}
+
+h1 {
+  margin-top: 7px;
+  color: #ededed;
+  margin-left: 10px;
+}

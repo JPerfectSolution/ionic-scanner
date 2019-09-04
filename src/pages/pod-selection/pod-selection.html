@@ -1,0 +1,48 @@
+<core-toolbar></core-toolbar>
+
+<ion-content>
+  <ion-row>
+    <ion-col class="product-header px-20px">
+      <ion-icon name="ios-arrow-back" (click)="gotoPrevPage()"></ion-icon>
+      <div class="title">POD SELECTION</div>
+      <ion-icon name="add"></ion-icon>
+    </ion-col>
+  </ion-row>
+  <div class="d-flex-middle d-flex-between px-20px">
+    <div class="d-flex-middle search-pan">
+      <ion-icon name="search"></ion-icon>
+      <ion-input placeholder="Search Pod or Barcode"></ion-input>
+    </div>
+    <ion-icon name="camera" class="scanner-camera"></ion-icon>
+  </div>
+  
+  <div class="prod-item d-flex-middle border-bottom-0">
+    <ion-checkbox class="prod-checkbox"></ion-checkbox>
+    <div class="prod-content">
+      <ion-row class="prod-controls">
+        <ion-col col-6>
+          <div class="prod-btn">
+            Delete Pods
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+  <div class="prod-item d-flex-middle">
+    <ion-checkbox class="prod-checkbox"></ion-checkbox>
+    <div class="prod-content" (click)="editPOD()">
+      <div class="prod-item-header">
+        <span class="item-name">Super Candy</span>
+        <div class="item-unit">
+          <span>120 Filled</span>
+          <ion-icon name="ios-arrow-forward"></ion-icon>
+        </div>
+      </div>
+      <div class="prod-item-summary">
+        <span>Aisle 1</span> |
+        <span>Shelf 3</span> |
+        <span>Bin 6</span>
+      </div>
+    </div>
+  </div>
+</ion-content>

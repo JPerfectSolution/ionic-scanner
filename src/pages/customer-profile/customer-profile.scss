@@ -1,0 +1,35 @@
+page-customer-profile {
+	background : #ededed;
+
+	ion-header {
+	  &.sec-header {
+	    top: 56px;
+	    position: fixed;
+	    ion-icon {
+	      color: #1a73e8;
+	    }
+	  }
+	}
+
+	.green-box {
+	  margin-top: 69px;
+	  height: 200px;
+	  overflow-y: auto;
+	}
+
+	.green-box {
+		h3,h5 {
+			color : #fff;
+		}
+	}
+
+
+	ion-label[item-content] {
+		flex: 1;
+	}
+
+	.scroll-content {
+		margin-top:3px !important;
+	}
+
+}

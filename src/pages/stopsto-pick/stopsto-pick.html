@@ -1,0 +1,62 @@
+<!--
+  Generated template for the SalesmanChooseRoutePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header color="light" class="sec-header">
+    <ion-navbar color="light">
+        <ion-title>Invoice picker</ion-title>
+    </ion-navbar>
+</ion-header>
+<core-toolbar></core-toolbar>
+<div class="green-box">
+    <h1>PICKING : {{ route.name ? route.name : route.id }}</h1>
+    <h5 *ngIf="location">Shipping to {{ location.name }}</h5>
+    <ion-grid>
+        <ion-row>
+            <ion-col col-6>
+                <button (click)="print(route)" full round color="danger" ion-button>PRINT</button>
+            </ion-col>
+            <ion-col col-6>
+                <button (click)="open(route, customer)" [disabled]="!customer" full round color="danger" ion-button>OPEN</button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</div>
+<ion-content>
+    <div style="text-align: center;padding: 10px;">
+        <ion-chip style="width: 80%; text-align: center;margin: 0 auto;">
+            <ion-icon name="color-filter" color="primary"></ion-icon>
+            <ion-label>{{ count(route.list) }} PRODUCTS<span *ngIf="truck">[{{ truck.name }}]</span></ion-label>
+        </ion-chip>
+    </div>
+    <ion-list>
+        <div *ngFor="let aisle of aisles">
+            <ion-item-divider color="primary">
+                <p style="color:#fff;text-align:center ">AISLE {{ aisle }}</p>
+            </ion-item-divider>
+            <div *ngFor="let item of route.list">
+                <ion-item *ngIf="parseInt(item.aisle) == aisle" (click)="scan(item)">
+                    <ion-label text-wrap item-start style="flex:6;">
+                        <ion-icon [color]="getStatus(item)" name="checkmark-circle"></ion-icon>
+                        {{ item.itemName }} <br />
+                        Bay : {{ item.bay }} | Bin : {{ item.bin }}
+                    </ion-label>
+                    <ion-label item-end style="text-align: right;position: relative;top: -6px;">
+                        <ion-icon>
+                            <p *ngIf="!forceLocal" class="text-muted">
+                                {{ item.amt - ( item.scanned ? item.scanned : 0 ) }}
+                                <ion-icon color="primary" name="barcode"></ion-icon>
+                            </p>
+                            <p *ngIf="forceLocal" class="text-muted">
+                                {{ item.amt - ( item.delivered ? item.delivered : 0 ) }}
+                                <ion-icon color="primary" name="barcode"></ion-icon>
+                            </p>
+                        </ion-icon>
+                    </ion-label>
+                </ion-item>
+            </div>
+        </div>
+    </ion-list>
+</ion-content>

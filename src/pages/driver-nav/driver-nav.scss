@@ -1,0 +1,35 @@
+page-driver-nav {
+  background: rgba(0, 0, 0, 0);
+  ion-header {
+    &.sec-header {
+      top: 56px;
+      position: fixed;
+      ion-icon {
+        color: #1a73e8;
+      }
+    }
+  }
+
+  .map_content {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+  }
+
+
+  ion-content {
+    margin-top: 111px !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+    height: 110px;
+  }
+
+  .scroll-content {
+    margin-top: 2px !important;
+  }
+
+  ion-grid {
+    button {
+      border: none !important;
+    }
+  }
+}

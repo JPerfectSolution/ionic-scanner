@@ -1,0 +1,143 @@
+<!--
+  Generated template for the AddNewProductPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header color="light" class="sec-header">
+  <ion-navbar color="light">
+    <ion-title *ngIf="!item._id">New item</ion-title>
+    <ion-title *ngIf="item._id">Edit item</ion-title>
+    <ion-buttons end>
+      <button *ngIf="!item._id" (click)="saveProduct(item)" ion-button icon-only>
+        Save (done)
+      </button>
+      <button *ngIf="item._id" (click)="updateProduct(item)" ion-button icon-only>
+        Update
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content  >
+  <ion-list>
+   <ion-item-divider color="dark">
+       Product information
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>Vendor</ion-label>
+      <ion-select [(ngModel)]="item.vendor">
+        <ion-option *ngFor="let vendor of vendors" [value]="vendor">{{ vendor }}</ion-option>
+      </ion-select>
+    </ion-item>
+     <ion-item>
+      <ion-label>Warehouse</ion-label>
+      <ion-select [(ngModel)]="item.warehouse">
+        <ion-option *ngFor="let warehouse of locations" [value]="warehouse">{{ warehouse }}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" floating>Name</ion-label>
+      <ion-input [(ngModel)]="item.itemName"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="!item._id">
+      <ion-label color="primary" floating>Barcode</ion-label>
+      <ion-input [(ngModel)]="item.barcode"></ion-input>
+    </ion-item>
+    
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+            <ion-item>
+              <ion-label color="primary" floating>Units (Quantity)</ion-label>
+              <ion-input [(ngModel)]="item.unit" type="number"></ion-input>
+            </ion-item>
+        </ion-col>
+        <ion-col>
+             <ion-item>
+              <ion-label color="primary" floating>Unit cost</ion-label>
+              <ion-input [(ngModel)]="item.unitCost" type="number"></ion-input>
+            </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+   
+    <ion-item>
+      <ion-label color="primary" floating>Unit price</ion-label>
+      <ion-input [(ngModel)]="item.unitPrice" type="number"></ion-input>
+    </ion-item>
+     <ion-item>
+      <ion-label color="primary" floating>SKU</ion-label>
+      <ion-input [(ngModel)]="item.sku" type="text"></ion-input>
+    </ion-item>
+     <ion-item>
+      <ion-label color="primary" floating>Alert below</ion-label>
+      <ion-input [(ngModel)]="item.alertBelow" type="number"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Category</ion-label>
+      <ion-select multiple="true" [(ngModel)]="item.category">
+        <ion-option *ngFor="let category of categories" [value]="category">{{ category }}</ion-option>
+      </ion-select>
+    </ion-item>
+     
+    <button (click)="newCat()" ion-button  icon-start color="primary"><ion-icon name="add-circle"></ion-icon> Add category.</button>
+
+    <ion-item-divider color="dark">
+       Warehouse information
+    </ion-item-divider>
+    <ion-item>
+      <ion-label color="primary" floating>Aisle #</ion-label>
+      <ion-input [(ngModel)]="item.aisle" type="number"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" floating>Bin #</ion-label>
+      <ion-input [(ngModel)]="item.bin" type="number"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" floating>Bay #</ion-label>
+      <ion-input [(ngModel)]="item.bay" type="number"></ion-input>
+    </ion-item>
+
+    <ion-item-divider color="dark">
+       Item Dimensions
+    </ion-item-divider>
+
+    <ion-item>
+      <ion-label color="primary" floating>Weight</ion-label>
+      <ion-input [(ngModel)]="item.weight" type="number"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" floating>Length</ion-label>
+      <ion-input [(ngModel)]="item.length" type="number"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" floating>Height</ion-label>
+      <ion-input [(ngModel)]="item.height" type="number"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" floating>Width</ion-label>
+      <ion-input [(ngModel)]="item.width" type="number"></ion-input>
+    </ion-item>
+
+    <div *ngIf="item._id">
+      <ion-item-divider  color="dark">
+        Barcodes
+      </ion-item-divider>
+
+      <ion-item *ngFor="let bar of item.barcode">
+        <ion-label>
+          <p>{{ bar }}</p>
+        </ion-label>
+        <button ion-button fill="outline" (click)="item.barcode.splice(item.barcode.indexOf(bar), 1)" slot="end">Delete</button>
+      </ion-item>
+       <button ion-button style="height: 130px;margin-bottom:10px;" color="primary">Add barcode</button>
+    </div>
+
+  </ion-list>
+</ion-content>

@@ -1,0 +1,54 @@
+{
+  "_from": "com-badrit-printplugin",
+  "_id": "com-badrit-printplugin@0.2.0",
+  "_inBundle": false,
+  "_integrity": "sha1-gb2gEsNdldAtXm/0Eo8cNFoVvPc=",
+  "_location": "/com-badrit-printplugin",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "com-badrit-printplugin",
+    "name": "com-badrit-printplugin",
+    "escapedName": "com-badrit-printplugin",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/com-badrit-printplugin/-/com-badrit-printplugin-0.2.0.tgz",
+  "_shasum": "81bda012c35d95d02d5e6ff4128f1c345a15bcf7",
+  "_spec": "com-badrit-printplugin",
+  "_where": "/Users/Adrian/javatraders",
+  "bugs": {
+    "url": "https://github.com/mohamed-salah/phonegap-print-plugin/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "com-badrit-printplugin",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "deprecated": false,
+  "description": "Cordova Print Plugin",
+  "homepage": "https://github.com/mohamed-salah/phonegap-print-plugin#readme",
+  "keywords": [
+    "cordova",
+    "print",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "license": "MIT",
+  "name": "com-badrit-printplugin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohamed-salah/phonegap-print-plugin.git"
+  },
+  "version": "0.2.0"
+}

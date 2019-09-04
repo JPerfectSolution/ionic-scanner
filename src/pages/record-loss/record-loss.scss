@@ -1,0 +1,27 @@
+page-record-loss {
+  background: #ededed;
+
+  ion-header {
+    &.sec-header {
+      top: 56px;
+      position: fixed;
+      ion-icon {
+        color: #1a73e8;
+      }
+    }
+  }
+
+  .green-box {
+    margin-top: 100px;
+    height: 200px;
+    overflow-y: auto;
+
+    h4 {
+      color : #fff !important;
+    }
+  }
+
+  .scroll-content {
+    margin-top: 3px !important;
+  }
+}

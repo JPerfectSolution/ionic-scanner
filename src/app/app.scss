@@ -1,0 +1,274 @@
+// http://ionicframework.com/docs/theming/
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+$dark-color: #444444;
+$light-color: #f4f4f4;
+$stable-color: #eeeeee;
+$green-color: #24653B;
+$positive-color:  #387ef5;
+$calm-color: #11c1f3;
+$balanced-color: #33cd5f;
+$energized-color: #ffc900;
+$assertive-color: #ef473a;
+$royal-color: #886aea;
+
+$blue-color: rgb(26, 115, 232);
+$green-color: rgb(105, 167, 79);
+$orange-color: rgb(245, 120, 17);
+$red-color: rgb(249, 51, 36);
+
+
+$colors: ( primary: $blue-color,
+secondary: #32db64,
+danger: #f53d3d,
+light: #f4f4f4,
+dark: #333,
+twitter: ( base: #55acee,
+contrast: #ffffff));
+
+
+
+
+ion-label {
+  color: #1a73e8;
+}
+
+.green-box {
+  ion-grid {
+    position:relative;
+    top: -12px;
+  }
+
+  h3 {
+    position:relative;
+    top:8px;
+  }
+}
+button,
+[aria-checked="true"] .alert-radio-label {
+  color: #1a73e8 !important;
+}
+
+.card {
+  padding: 2px;
+  border: 1px #ededed solid;
+  border-radius: 10px;
+  chart {
+    margin-top: 18px;
+  }
+}
+
+.green-color {
+  color: $green-color !important;
+}
+.orange-color {
+  color: $orange-color !important;
+}
+.red-color {
+  color: $red-color !important;
+}
+
+.green-bg-color {
+  background-color: $green-color !important;
+}
+.orange-bg-color {
+  background-color: $orange-color !important
+}
+.red-bg-color {
+  background-color: $red-color !important;
+}
+.routes-progress-outer {
+  width: 100%;
+  margin: 0;
+  background-color: $dark-color;
+  text-align: center;
+  position: relative;
+  .routes-progress-inner {
+    min-width: 15%;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0px;
+    height: 25px;
+    background-color: $orange-color;
+  }
+  .routes-pro{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    color: $orange-color;
+    font-size: 2rem;
+    font-weight: bolder;
+    padding: 1px;
+    .routes-done {
+      color: white;
+    }
+  }
+}
+.d-flex-middle {
+  display: flex;
+  align-items: center;
+}
+.w-100 {
+  width: 100%;
+}
+.px-20px {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.px-10px {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.pt-10px {
+  padding-top: 10px;
+}
+.d-flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+.d-flex-center {
+  display: flex;
+  justify-content: center;
+}
+.align-item-center {
+  display: flex;
+  align-items: center;
+}
+.border-bottom-0 {
+  border-bottom: none !important;
+}
+
+.prod-btn {
+  border: solid 1.3px $blue-color;
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 3px;
+  min-width: 85px;
+}
+
+.green-box {
+  padding: 22px;
+  background-color: #1a73e8;
+  margin-top: 54px;
+
+  &.add-margin {
+    margin-top: 110px;
+  }
+}
+
+ion-content {
+  &.sm-pad-top {
+    margin-top: 190px;
+  }
+}
+
+.green-box h1 {
+  text-align: center;
+  padding: 25px 5px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+
+
+button[color] {
+  color: $light-color !important;
+  width: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.alert-radio-label {
+  color: $dark-color !important;
+}
+
+.alert-radio-inner {
+  border-color: #1a73e8 !important;
+}
+
+
+ion-label[item-content] {
+    flex:2;
+}
+
+ion-navbar,
+ion-menu {
+  .toolbar-background {
+    background: $dark-color;
+  }
+
+  [menutoggle] {
+    position: fixed;
+    right: 0px;
+  }
+
+  .toolbar-title,
+  ion-icon {
+    color: $light-color;
+  }
+}
+
+ion-menu {
+  .toolbar-title {
+    text-align: left;
+  }
+
+
+  ion-title {
+    width: 98% !important;
+    position: relative !important;
+    padding: 0px 12px !important;
+  }
+}
+
+.side-menu {
+  background: $dark-color;
+
+  ion-item,
+  .item-inner {
+    background: $dark-color !important;
+    font-weight: bolder;
+    border: none !important;
+    color: #ededed;
+  }
+}
+
+.ios {
+  .sec-header {
+    ion-navbar {
+      padding-top: 8px !important;
+      height: 57px !important;
+      min-height: 40px !important;
+    }
+
+    button {
+      top: 4px;
+    }
+
+    ion-title {
+      padding-top: 0px;
+      top: -5px;
+    }
+  }
+}
+
+.green-box {
+  background-color: #1a73e8;
+}
+
+ion-label {
+    color: #1a73e8;
+}

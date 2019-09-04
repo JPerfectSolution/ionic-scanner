@@ -1,0 +1,30 @@
+<core-toolbar></core-toolbar>
+
+<ion-content>
+  <ion-row>
+    <ion-col class="product-header px-20px">
+      <ion-icon name="ios-arrow-back" (click)="gotoPrevPage()"></ion-icon>
+      <div class="title">SCANNING</div>
+      <ion-icon name="md-sync"></ion-icon>
+    </ion-col>
+  </ion-row>
+  <div class="sub-title">
+    <div class="d-flex-between align-item-center">
+      <span class="sub-title-circle"></span>
+      <span>AWESOME PRODUCT</span>
+      <span ></span>
+    </div>
+  </div>
+  <div>
+    <ion-input placeholder="Enter Barcode Manually"></ion-input>
+  </div>
+  <div class="barcord-scanning" (click)="startScanning()">
+    select 
+  </div>
+</ion-content>
+<ion-footer>
+  <div>Quantity 8/8</div>
+  <div class="btn-next">
+    NEXT: SUPER CANDY
+  </div>
+</ion-footer>

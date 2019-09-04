@@ -1,0 +1,71 @@
+page-picker-checker-dash {
+  
+  .header-box {
+    background: $blue-color;
+    color: white;
+    text-align: center;
+    margin-top: 55px;
+    padding: 15px;
+    .title {
+      font-size: 2.3rem;
+      margin-bottom: 10px;
+    }
+    .time {
+      font-size: 2rem;
+    }
+  }
+  
+  .sm-pad-top {
+    margin-top: 159px;
+  }
+
+  .picking-progress {
+    font-size: 2rem;
+    text-align: center;
+    .done {
+      color: $blue-color;
+    }
+    .all {
+      color: $orange-color;
+    }
+  }
+  .progress-inner {
+    color: rgb(72, 138, 255);
+  }
+  .item-border {
+    border: solid 1px $blue-color;
+    text-align: center;
+    padding: 10px 5px;
+    border-radius: 5px;
+    color: $dark-color;
+    font-size: 2rem;
+    margin: 5px 0;
+  }
+  .summary-wgt {
+    font-size: 2rem;
+    .done {
+      font-size: 4rem;
+      font-weight: bold;
+      color:$orange-color;
+    }
+  }
+  .scanner-box {
+    background-color: $orange-color;
+    color: #ffffff;
+    .scanner-type {
+      text-align: left;
+      font-size: 2.5rem;
+      padding: 10px 0;
+      border-bottom: solid 1px #ebebeb
+    }
+    .scanner-camera {
+      color: black;
+      font-size: 4rem;
+      border-left: solid 1px white;
+    }
+  }
+  ion-select {
+    width: 100%;
+    max-width: 100%;
+  }
+}

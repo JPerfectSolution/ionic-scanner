@@ -1,0 +1,40 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "com-badrit-printplugin": {
+      "PACKAGE_NAME": "com.dhub.app"
+    },
+    "cordova-plugin-actionsheet": {
+      "PACKAGE_NAME": "com.dhub.app"
+    },
+    "cordova-plugin-background-fetch": {
+      "PACKAGE_NAME": "com.dhub.app"
+    },
+    "cordova-plugin-barcodescanner": {
+      "PACKAGE_NAME": "com.dhub.app"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.dhub.app"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.dhub.app"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.dhub.app"
+    },
+    "com.googlemaps.ios": {
+      "PACKAGE_NAME": "com.dhub.app"
+    },
+    "cordova-plugin-badge": {
+      "PACKAGE_NAME": "com.dhub.app"
+    }
+  }
+}

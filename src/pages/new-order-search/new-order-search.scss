@@ -1,0 +1,16 @@
+page-new-order-search {
+  background: #ededed;
+  ion-header {
+    &.sec-header {
+      top: 56px;
+      position: fixed;
+      ion-icon {
+        color: #1a73e8;
+      }
+    }
+  }
+
+  ion-content {
+  	margin-top: 50px !important;
+  }
+}

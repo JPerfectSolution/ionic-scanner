@@ -1,0 +1,45 @@
+page-edit-pod {
+  .product-header{
+    margin-top: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px gray;
+    .title {
+      text-align: center;
+      font-weight: bold;
+      font-size: 2.4rem !important;
+      color: $dark-color;
+    }
+    ion-icon {
+      color: $blue-color;
+      font-size: 4rem;
+      font-weight: bold;
+    }
+    span {
+      color: $blue-color;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+  }
+  .sub-header {
+    background: $blue-color;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    padding: 5px;
+  }
+  .search-pan {
+    font-size: 2.4rem;
+    border-bottom: solid 1px $dark-color;
+  }
+  
+  .scanner-camera {
+    font-size: 4rem;
+  }
+  
+  .scroll-content {
+    margin-top: 5px !important;
+  }
+  
+}

@@ -1,0 +1,33 @@
+page-picker-choose-route {
+  background: #ededed;
+  ion-header {
+    &.sec-header {
+      top: 56px;
+      position: fixed;
+      ion-icon {
+        color: #1a73e8;
+      }
+    }
+  }
+
+  ion-content {
+    margin-top: 160px !important;
+  }
+
+  .scroll-content {
+    margin-top: 5px !important;
+  }
+
+  ion-list {
+    ion-icon[name="arrow-forward"] {
+      font-size: 30px;
+      position: relative;
+      right: 0px;
+      top: 7px;
+    }
+  }
+
+  .green-box h1 {
+    padding-top: 33px;
+  }
+}

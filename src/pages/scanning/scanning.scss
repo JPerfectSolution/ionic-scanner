@@ -1,0 +1,46 @@
+page-scanning {
+  .product-header{
+    margin-top: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px black;
+    .title {
+      text-align: center;
+      font-weight: bold;
+      font-size: 2.4rem !important;
+    }
+    ion-icon {
+      color: $blue-color;
+      font-size: 4rem;
+      font-weight: bold;
+    }
+  }
+  .sub-title {
+    padding: 10px;
+    background: $blue-color;
+    color: white;
+    font-size: 1.7rem;
+    .sub-title-circle {
+      min-width: 30px;
+      min-height: 30px;
+      background: $green-color;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+    .btn-detail {
+      padding: 5px 15px;
+      border: solid 1px;
+      border-radius: 20px;
+    }
+    .item-name {
+      font-weight: bold;
+    }
+    .item-value {
+      color: black;
+    }
+  }
+  .barcode-scanning {
+    width: 100%;
+  }
+}

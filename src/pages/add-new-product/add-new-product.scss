@@ -1,0 +1,11 @@
+page-add-new-product {
+  background: #ededed;
+  ion-header {
+    &.sec-header {
+      position: fixed;
+      ion-icon {
+        color: #1a73e8;
+      }
+    }
+  }
+}

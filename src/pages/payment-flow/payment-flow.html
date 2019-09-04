@@ -1,0 +1,56 @@
+<!--
+  Generated template for the SalesmanChooseRoutePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header color="light" class="sec-header">
+  <ion-navbar color="light">
+    <ion-title>Collecting on #{{ invoice.id }} </ion-title>
+    <ion-buttons end>
+      <button (click)="dismiss()" ion-button icon-only>
+        cancel
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content style="margin-top: 40px;">
+
+  
+
+  <div style="padding:15px;">
+    <h4>Subtotal : {{ invoice.total.toFixed(2) }} USD</h4>
+    <div *ngIf="invoice.taxRate">
+    <h4>Tax : {{ invoice.taxValue.toFixed(2) }} USD ({{ invoice.taxRate }} %)</h4>
+    </div>
+    <hr color="primary">
+    <h4>Total : {{ (invoice.taxValue + invoice.total).toFixed(2) }} USD</h4>
+    <h4>Amount left : {{ ( (invoice.taxValue + invoice.total) - (invoice.value ? invoice.value : 0) ).toFixed(2)  }} USD</h4>
+    <ion-item>
+      <ion-label>Payment method</ion-label>
+      <ion-select [(ngModel)]="invoice.method">
+        <ion-option>CASH</ion-option>
+        <ion-option>CHECK</ion-option>
+        <ion-option>UPDATE</ion-option>
+        <ion-option *ngFor="let card of cards" [value]="card.id">{{ card.name }}</ion-option>
+        <ion-option value="NEW">Add new card</ion-option>
+      </ion-select>
+    </ion-item>
+    <button color="primary" (click)="addCard(invoice)" ion-button *ngIf="invoice.method =='NEW'">ADD NEW CARD</button>
+    <ion-item *ngIf="invoice.method == 'CHECK'">
+      <ion-label color="primary" floating>CHECK NUMBER</ion-label>
+      <ion-input [(ngModel)]="invoice.check_number"></ion-input>
+    </ion-item>
+
+    <ion-item >
+      <ion-label color="primary" floating>Amount to charge</ion-label>
+      <ion-input [(ngModel)]="invoice.amt"></ion-input>
+    </ion-item>
+
+  </div>
+</ion-content>
+<ion-footer color="dark">
+  <ion-toolbar color="dark">
+    <button ion-button full color="info" (click)="charge(invoice)" round>Collect</button>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,79 @@
+<core-toolbar></core-toolbar>
+
+<ion-content>
+  <ion-row>
+    <ion-col class="product-header px-20px">
+      <ion-icon name="ios-arrow-back" (click)="gotoPrevPage()"></ion-icon>
+      <div class="title">STOPS</div>
+      <ion-icon name="md-sync"></ion-icon>
+    </ion-col>
+  </ion-row>
+  <div class="sub-title">
+    <span class="sub-title-circle"></span>
+    <span>BURLINGTON ROUTE | HERO TRUCK</span>
+  </div>
+  <div class="routes-progress-outer">
+    <div class="routes-progress-inner" style="width: 33.33%">
+    </div>
+    <div class="routes-pro"><span class="routes-done">12</span>/30 <span class="routes-done">Routes</span></div>
+  </div> 
+  <div class="prod-item d-flex-middle border-bottom-0">
+    <ion-checkbox class="prod-checkbox"></ion-checkbox>
+    <div class="print-types">
+      <ion-select [(ngModel)]="print_type" >
+        <ion-option value="invoice">Print Invoice</ion-option>
+        <ion-option value="Tickets">Print Picking Tickets</ion-option>
+        <ion-option value="Labels">Print Shipping Labels</ion-option>
+      </ion-select>
+      <div class="prod-btn">Print</div>
+    </div>
+  </div>
+  <div class="prod-item d-flex-middle">
+    <ion-checkbox class="prod-checkbox"></ion-checkbox>
+    <div class="prod-content" (click)="gotoPickingOrder()" [style.background-color]="'$green-color'">
+      <div class="prod-item-header">
+        <span class="item-name green-color">Aram Store</span>
+        <div class="item-unit">
+          <div class="progress">Picked</div>
+          <span class="progress-status">10/10</span>
+          <ion-icon name="ios-arrow-forward"></ion-icon>
+        </div>
+      </div>
+      <div class="prod-item-summary">
+        <span>Invoice #87997 PO# 19 Position 2</span>
+      </div>
+    </div>
+  </div>
+  <div class="prod-item d-flex-middle">
+    <ion-checkbox class="prod-checkbox"></ion-checkbox>
+    <div class="prod-content" (click)="gotoPickingOrder()" [style.background-color]="'$orange-color'">
+      <div class="prod-item-header">
+        <span class="item-name orange-color">My Store</span>
+        <div class="item-unit">
+          <div class="progress orange-bg-color">In Process</div>
+          <span class="progress-status">7/40</span>
+          <ion-icon name="ios-arrow-forward"></ion-icon>
+        </div>
+      </div>
+      <div class="prod-item-summary">
+        <span>Invoice #87997 PO# 19 Position 2</span>
+      </div>
+    </div>
+  </div>
+  <div class="prod-item d-flex-middle">
+    <ion-checkbox class="prod-checkbox"></ion-checkbox>
+    <div class="prod-content" (click)="gotoPickingOrder()">
+      <div class="prod-item-header">
+        <span class="item-name red-color">Your Store</span>
+        <div class="item-unit">
+          <div class="progress red-bg-color">Incomplete</div>
+          <span class="progress-status">0/8</span>
+          <ion-icon name="ios-arrow-forward"></ion-icon>
+        </div>
+      </div>
+      <div class="prod-item-summary">
+        <span>Invoice #87997 PO# 19 Position 2</span>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,32 @@
+{
+  "name": "cdv-linea",
+  "version": "0.0.1",
+  "description": "Linea Pro 7 SDK Wrapper",
+  "cordova": {
+    "id": "cdv-linea",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheikhshift/cdv-linea.git"
+  },
+  "keywords": [
+    "linea",
+    "barcode",
+    "ecosystem:cordova"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "Cheikh Seck <cheikhhseck@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cheikhshift/cdv-linea/issues"
+  },
+  "homepage": "http://gophersauce.com"
+}

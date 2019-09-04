@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="linea-cordova-plugin" version="0.2.4">
+    <name>LineaPro</name>
+    <description>LineaPro cordova plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,device</keywords>
+    
+    <js-module src="www/linea.js" name="LineaPlugin">
+        <clobbers target="window.plugins.lineaPlugin"/>
+    </js-module>
+
+    <platform name="ios">
+        <framework src="ExternalAccessory.framework" />
+        <config-file target="config.xml" parent="/*">
+            <feature name="LineaPlugin">
+                <param name="ios-package" value="LineaPlugin"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/LineaPlugin.h" />
+        <source-file src="src/ios/LineaPlugin.m" />
+    </platform>
+</plugin>

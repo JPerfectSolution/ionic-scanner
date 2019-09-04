@@ -1,0 +1,78 @@
+page-product-selection {
+  .product-header{
+    margin-top: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px black;
+    .title {
+      text-align: center;
+      font-weight: bold;
+      font-size: 2.4rem !important;
+    }
+    ion-icon {
+      color: $blue-color;
+      font-size: 4rem;
+      font-weight: bold;
+    }
+  }
+  .prod-item {
+    border-bottom: solid 1px gray;
+    padding: 10px 20px;
+    .prod-checkbox {
+      margin-top: -10px !important;
+    }
+    .prod-content {
+      width: 100%;
+      padding-left: 20px;
+      .prod-item-header {
+        color: $dark-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .item-name {
+          font-weight: bold;
+          font-size: 2rem;
+        }
+        .item-unit {
+          display: flex;
+          align-items: center;
+          ion-icon {
+            font-size: 4rem;
+            color: $green-color;
+            font-weight: bold;
+            margin-left: 10px;
+          }
+        }
+      }
+      .prod-item-summary {
+        color: $dark-color;
+      }
+    }
+  }
+  .prod-controls {
+    color: $dark-color;
+
+    .prod-btn {
+      border: solid 1.3px $blue-color;
+      padding: 10px;
+      text-align: center;
+      border-radius: 3px;
+    }
+  }
+  .search-pan {
+    font-size: 2.4rem;
+    border-bottom: solid 1px $dark-color;
+  }
+  
+  .scanner-camera {
+    font-size: 4rem;
+  }
+  .scroll-content {
+    margin-top: 5px !important;
+  }
+  
+  .green-box h1 {
+    padding-top: 33px;
+  }
+}

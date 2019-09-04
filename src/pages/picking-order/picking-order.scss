@@ -1,0 +1,130 @@
+page-picking-order {
+  .product-header{
+    margin-top: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px black;
+    .title {
+      text-align: center;
+      font-weight: bold;
+      font-size: 2.4rem !important;
+    }
+    ion-icon {
+      color: $blue-color;
+      font-size: 4rem;
+      font-weight: bold;
+    }
+  }
+  .sub-title {
+    padding: 10px;
+    background: $blue-color;
+    color: white;
+    font-size: 1.7rem;
+    .sub-title-circle {
+      min-width: 30px;
+      min-height: 30px;
+      background: $orange-color;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+    .btn-detail {
+      padding: 5px 15px;
+      border: solid 1px;
+      border-radius: 20px;
+    }
+    .item-name {
+      font-weight: bold;
+    }
+    .item-value {
+      color: black;
+    }
+  }
+  .prod-item {
+    border-bottom: solid 1px gray;
+    padding: 10px;
+    .prod-checkbox {
+      margin-top: -10px !important;
+    }
+    .print-types {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.8rem;
+      ion-select {
+        width: 100%;
+        border-bottom: solid 1px $blue-color;
+        margin-left: 20px;
+        padding: 5px 5px 0px 0px;
+        .select-icon-inner {
+          color: $blue-color;
+        }
+        button {
+          height: unset !important;
+        }
+      }
+    }
+    .prod-content {
+      width: 100%;
+      padding-left: 20px;
+      font-size: 1.8rem;
+      .prod-item-header {
+        color: $dark-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .item-name {
+          font-weight: bold;
+          font-size: 1.8rem;
+        }
+        .progress {
+          width: 110px;
+          text-align: center;
+          background-color: #69a74f;
+          height: 30px;
+          border-radius: 15px;
+          color: white;
+          padding: 5px;
+          margin-right: 8px;
+        }
+        .item-unit {
+          display: flex;
+          align-items: center;
+          ion-icon {
+            font-size: 4rem;
+            color: $green-color;
+            font-weight: bold;
+            margin-left: 10px;
+          }
+          .progress-status {
+            min-width: 48px;
+            text-align: left;
+            font-size: 1.5rem;
+          }
+        }
+      }
+      .prod-item-summary {
+        color: $dark-color;
+        font-size: 1.5rem
+      }
+    }
+  }
+  .prod-controls {
+    color: $dark-color;
+  }
+  .search-pan {
+    font-size: 2.4rem;
+    border-bottom: solid 1px $dark-color;
+  }
+  
+  .scanner-camera {
+    font-size: 4rem;
+  }
+  .scroll-content {
+    margin-top: 5px !important;
+  }
+  
+  .green-box h1 {
+    padding-top: 33px;
+  }
+}

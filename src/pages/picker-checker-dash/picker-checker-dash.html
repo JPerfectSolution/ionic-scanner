@@ -1,0 +1,62 @@
+<!--
+  Generated template for the SalesmanDashboardPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<core-toolbar></core-toolbar>
+
+<ion-content >
+  <div class="header-box">
+    <div class="title">Mark Cross | Primary Warehouse</div>
+    <div class="time">{{ currentDate }}</div>
+  </div>
+  <div class="picking-progress">
+    Picking Progress: <span class="done">30</span><span class="all">/100</span> Items
+  </div>
+  <progress-bar [progress]="30" [color]="'#488aff'"></progress-bar>
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="summary-wgt item-border" (click)="gotoOrders()">
+          <div><span class="done">12</span>/22</div>
+          <div>ORDERS</div>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="summary-wgt item-border" (click)="gotoReceiving()">
+          <div><span class="done">8</span>/50</div>
+          <div>RECEIVING</div>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="summary-wgt item-border" (click)="gotoTransfer()">
+          <div><span class="done">18</span>/28</div>
+          <div>TRANSFER</div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="item-border scanner-box" (click)="scanAynBarcode()">
+      <ion-col col-9 >
+        <div class="scanner-type">
+          SCAN ANY BARCODE
+        </div>
+      </ion-col>
+      <ion-col col-3 class="scanner-camera">
+        <ion-icon name="camera"></ion-icon>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row class="item-border">
+      <ion-col (click)="gotoUpdateInventory()">
+        VIEW & UPDATE INVENTORY
+      </ion-col>
+    </ion-row>
+    <ion-row class="item-border">
+      <ion-col (click)="gotoUpdatePOD()">
+        UPDATE POD LOCATIONS
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

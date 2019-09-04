@@ -1,0 +1,24 @@
+<!--
+  Generated template for the SignaturePadPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header color="light" class="sec-header">
+  <ion-navbar color="light">
+  <ion-buttons start>
+      <button (click)="clear()" ion-button icon-only>
+        Clear
+      </button>
+    </ion-buttons>
+    <ion-title>Client signature</ion-title>
+    <ion-buttons end>
+      <button (click)="dismiss()" ion-button icon-only>
+        Save
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content no-bounce >
+  <signature-pad [options]="signaturePadOptions" (onBeginEvent)="drawStart()" (onEndEvent)="drawComplete()"></signature-pad>
+</ion-content>
